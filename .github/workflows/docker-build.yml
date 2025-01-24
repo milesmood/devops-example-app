@@ -7,6 +7,7 @@ on:
 
 env:
   TEST_TAG: ukatherine/devops-example-app:test
+  LATEST_TAG: ukatherine/devops-example-app:latest
 
 jobs:
   docker:
@@ -43,6 +44,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ukatherine/devops-example-app:latest
-          
+          tags: ${{ env.LATEST_TAG }}
       
