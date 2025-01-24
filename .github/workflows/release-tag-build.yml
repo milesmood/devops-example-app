@@ -20,7 +20,7 @@ jobs:
 
       - uses: docker/login-action@v1
         with:
-          username: ${{ var.DOCKER_USERNAME }}
+          username: ${{ vars.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       # Заливаем новый тег
